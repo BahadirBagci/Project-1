@@ -1,0 +1,458 @@
+*{          /*sayfanın başlangıç işlemleri yapıldı */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{    /* tüm yazı ayarları*/
+font-family: "lato",sans-serif;
+font-size: 1.6rem;
+font-weight: 400;
+line-height: 1.5rem;
+background-color: #fff;
+}
+
+a{   /*bnavının altındaki çizgi*/
+    text-decoration: none;
+}
+
+ul{/*linklerin başındaki nokta (sırasız liste noktaları) kaldırıldı */
+    list-style-type: none;
+}
+
+section{
+    padding: 10rem;
+    padding-bottom: 10rem;
+    text-align: center;
+}
+
+.btn{/*btn butonların ayarı*/
+    margin-top: 2rem ;
+    font-size: 2rem;
+    font-weight: 400;
+    display: inline-block;
+    border-radius: .2rem 3rem .2rem 3rem;
+    border: 2px solid #fff;
+    cursor: pointer;/*üstünbe gelindiğinde tıklanıyormuş gibi olacak */
+    transition: all .4s;
+}
+
+.btn-outline{
+    color: #fff;
+    border-color: #fff;
+    background-color: transparent;
+    padding: 2.2rem 1.6rem;
+   
+}
+
+.btn-outline:hover{
+    color:#212529 ;
+    background-color: #fff;
+
+}
+
+.btn-primkary{
+ background-color: #fff;  
+ border-color: #fff;
+ padding: 2.2rem 1.6rem;
+ border-color: #424242; 
+}
+
+.btn-primkary:hover{
+    background-color: #424242;
+    border-color: #424242;
+    color: #fff;
+ 
+
+}
+
+.img-fluid{/*ortadaki kafa*/
+    max-width: 440px;
+    height: auto;
+    margin-top: 10rem;
+    float: left; /* b fotoğrafını sola kaydır */
+    margin-right: 20px; /* Fotoğraf ile baloncuk arasına boşluk bırak */
+}
+
+.balon {
+    position: relative;
+    left: 40%;
+    top: -5%; /* Metni yüksek konumda başlatın */
+    transform: translateX(-50%);
+    text-align: center; /* Metni ortala */
+    transition: all 0.5s; /* Balon ve metni küçültme animasyonları */
+  }
+  
+  .balon img {
+    max-width: 40%; /* Baloncuk resminin maksimum genişliği */
+    opacity: 0.8; /* arka plan fotoğrafının şeffaflığını ayarladım */
+  }
+  
+  .balon-metin {
+    position: absolute;
+    top: 46%; /* Metni dikeyde ortala */
+    left: 75%; /* Metni yatayda ortala */
+    transform: translate(-50%, -50%); /* Hem dikey hem yatayda ortala */
+    text-align: center; /* Metni ortala */
+    font-size: 3.5rem;
+    font-family: "Montserrat";
+    color: #333333;
+    padding: 1rem; /* İç boşluk ekleyin */
+    line-height: 1.3; /* Satır aralıkları */
+    z-index: 1;
+  }
+/*ESKİ MEDİA BÖLÜMÜ*/
+
+
+.clearfix::after{/*navbar da linkler start bootstrap e yapışıktı onları ayırdık birbirinden */
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.container{/*navbar linklerin ve başlığın yderleri belirlendi */
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+padding-left: 0.5rem;
+padding-right: 0.5rem;
+}
+
+@media (min-width:576px){
+.container{
+    max-width: 540px;}
+    html{
+        font-size: 7px;}
+}
+
+@media (min-width:768px){
+.container{
+    max-width: 720px;}  
+  html{
+    font-size: 8px;}
+}
+
+@media (min-width:992px){
+    .container{
+        max-width: 960px;}
+        html{
+            font-size: 9px;}
+}
+
+@media (min-width:1200px){
+    .container{
+        max-width: 1140px;}
+        html{
+            font-size: 10px;}
+}
+
+.text-büyük{/* linklerin hepsinin tamamıyla büyük harflerle yazması ayarlandı*/
+    text-transform: uppercase;
+
+}
+
+nav{ /*navbar*/
+width: 100%;
+font-family: "Montserrat" ;
+background-color:#262626 ;
+color: white;
+padding-top:4rem ;
+padding-bottom: 4rem;
+position: fixed;
+z-index: 500;/*nav bar baloncuğun altında kalıyodu üstüne çıkması için kullandım*/
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem; /* İstenilen sol boşluğu ayarlayın */
+}
+
+#logo-box{
+     padding: 0.5rem;
+     display: flex;
+     align-items: center; /* Dikeyde ortala */
+}
+
+#logo-box .logo{/*nav bardaki Start Bootstrap büyün harflerini büyüt renk*/
+color: #2b4cc6;
+font-weight: 700;
+font-size: 4rem;
+margin: 0 auto; /* Start Bootstrap yazısını yatayda ortala */
+}
+
+#nav-links .nav-item {/*linkleri yanyana dizdik */
+    float: left;
+    margin: 0.9rem;
+}
+
+#nav-links{
+    float: right; /*Başlık linklerini sağ tarafa aldık*/
+    float: right;
+    margin-right: 1rem; 
+}
+
+#nav-links .nav-link{ /* nav bardaki linklerin ayarlamaları */
+    color: #9ba8d5;
+    font-size: 1.9rem;
+    display: block;
+    font-weight: 600;
+    display: block;
+    padding: 1.2rem;
+    letter-spacing: 0.3rem;/*harfler arasına boşluk*/
+    transition: color 0.7s;/*linklerin ne sıklıkla renk değiğştireceğini ayarladım*/
+}
+
+#nav-links .nav-link:hover{/*linklerin üstüne gidildiğinde renk değiştirmesi*/
+    color:#7b19a4;
+}
+
+header{
+background-image: url(img/fo0.jpg);
+padding-top: calc(131px + 4rem);
+text-align: center;
+background-size: cover;        /*kapsayıcı olarak ayarladım */
+height: 95rem;                 /*yüksekliği % */
+width: 100%;                   /*genişlik*/
+}
+
+#portfolio{/*2. bölüm*/
+    height: 1300px;
+    padding-top:8rem ;
+    padding-bottom: 1rem;
+    text-align: center;
+    background-color: #fff;
+}
+
+#portfolio h2{
+    font-size: 4.8rem;
+    color:  #2b4cc6;
+}
+
+hr.star-dark{ /*yıldızlı çizgi*/
+    border-color:#424242  ;
+    border: none;
+    border-top: 0.5rem solid;
+    border-radius: 3px;
+    max-width: 100rem;
+    margin: 8.5rem auto;
+    overflow: visible;
+    height: 0.5;
+    margin-top: 5rem;
+}
+
+.star-dark::after{/*yıldızlı çizginin yıldızı*/
+    content: "\2605";
+    color: #2b4cc6;
+    font-weight: 900;
+    font-size: 4.2rem;
+    position: relative;
+    top: -15px;
+    padding: 0 8px;
+    background-color: #fff;
+    
+}
+
+.img-fluid-p{
+    max-width: 100%;
+    height: auto;
+
+}
+
+.col{/*kareler*/
+    float: left;
+    width: 33.333%;
+    padding: 30px;
+   margin-left: 11%;
+
+}
+
+.portfolio-item{/*kareler üst üste gelsin diye üstüne gidince simge çıkması */
+    position: relative;
+
+}
+
+.portfolio-item img {/*üst üste gelsin diye üstüne gidince simge çıkması */
+    display: block;
+    border-radius: 13px;
+}
+
+.img-overlay {/*üstüne gelince çıkacak olan simgenin ayarları */
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background-color: transparent;
+    transition: opacity 0.4s ease, background-color 0.4s ease; 
+    border-radius: 13px;
+}
+
+.img-overlay .icon {/*üstüne gelince çıkacak olan simgenin ayarları */
+   color: #fff; /* Simge rengi */
+    font-size: 8rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%) ;
+}
+
+
+.portfolio-item:hover .img-overlay {
+    opacity: 0.8;
+    background-color: #5555af;
+    border-radius: 13px;
+}
+
+
+#about{/*about kısmı */
+    background-color:#424242 ;
+    color:white;
+ 
+}
+
+#about h2{
+    font-size: 4.8rem;
+    text-transform: uppercase;
+
+}
+hr.star{ /*yıldızlı çizgi*/
+    border-color:#2D3D4F ;
+    border: none;
+    border-top: 0.5rem solid;
+    border-radius: 3px;
+    max-width: 70rem;
+    margin: 8.5rem auto;
+    overflow: visible;
+    height: 0.5;
+    margin-top: 5rem;
+    
+}
+
+.star::after{/*yıldızlı çizginin yıldızı*/
+    content: "\2605";
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 4.2rem;
+    position: relative;
+    top: -15px;
+    padding: 0 8px;
+    background-color: #424242;
+
+}
+
+#about-text{/*about kısmını sağa sola yasladım genişlik satır boşluğu font size ekledim */
+    text-align: left;
+    margin-top: -2%;
+    font-size: 2rem;
+}
+
+#about-text .left{
+    float: left;
+    width: 50%;
+    padding-right: 2rem;
+    padding-left: 35rem;
+    line-height: 1.3; 
+}
+
+#about-text .right{
+    float: right;
+    width: 50%;
+    padding-left: 2rem;
+    padding-right: 35rem;
+    line-height: 1.3; 
+}
+
+#about-text .text{
+font-size: 2.5rem;
+}
+
+/*contack*/
+#contact h2{
+    font-size: 4.8rem;
+    color: #2b4cc6;
+}
+
+#contact-form{
+width: 70%;
+margin:0 auto;
+text-align: left;
+}
+
+.form-group{
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 3rem;
+    margin-bottom: 4rem;
+}
+
+.form-group input,.form-group textarea{
+border: none;
+width: 100%;
+display: block;
+font-size: 2.4rem;
+}
+
+.form-group input:focus{/*fokus özelliğini kaldırdım*/
+    outline: 0;
+}
+
+.form-group textarea:focus{/* mesaj kısmının fokus özelliğini kaldırdım*/
+    outline: 0;
+}
+
+#iletisim-balloon {
+    background-color: #424242;
+    color: rgba(255, 255, 255, 0.9);
+    width: 7rem; /* Başlangıçta karenin genişliği */
+    height: 8rem; /* Başlangıçta karenin yüksekliği */
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    border-radius: 3rem .5rem 3rem .5rem; /* Başlangıçta köşeleri kare yapar */
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out; /* Genişleme animasyonu için geçiş efekti */
+    line-height: 2;
+    text-align: center;
+    font-size: 2rem;
+    
+}
+
+#iletisim-balloon:hover {
+    width: 15rem; /* Üzerine gelindiğinde genişliği artırır */
+    height: 15rem; /* Üzerine gelindiğinde yüksekliği artırır */
+    border-radius: 40%; /* Üzerine gelindiğinde köşeleri yuvarlar */
+    cursor: default;
+}
+
+#iletisim-balloon .content {
+    display: block;
+    
+}
+
+.links a {
+    display: block;
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+}
+
+
+.links a:hover {
+    text-decoration: underline;
+    font-size: 3rem;
+}
+.links {
+    display: grid; /* Grid kullanarak linkleri düzenler */
+    grid-template-columns: repeat(2, auto); /* İki sütun oluşturur */
+    justify-content: center; /* Linkleri yatayda merkezler */
+    gap: 4rem; /* Linkler arasına boşluk ekler */
+}
